@@ -8,7 +8,7 @@
 import Foundation
 
 struct TopLevelDictionaryCategory: Decodable {
-    let categories: Category
+    let categories: [Category]
 }
 
 struct Category: Decodable {
