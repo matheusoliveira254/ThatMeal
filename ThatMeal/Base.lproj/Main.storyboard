@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,13 +12,13 @@
         <!--Categories-->
         <scene sceneID="1rM-XO-dYY">
             <objects>
-                <tableViewController id="JV0-CE-KJn" sceneMemberID="viewController">
+                <tableViewController id="JV0-CE-KJn" customClass="MealCategoryListTableViewController" customModule="ThatMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eFd-xg-Vp7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="234" id="mzn-RA-OHu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="234" id="mzn-RA-OHu">
                                 <rect key="frame" x="0.0" y="50" width="393" height="234"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mzn-RA-OHu" id="61Z-0Z-zy1">
@@ -40,7 +41,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9oc-OV-xaQ">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mealInCategoryCell" id="9oc-OV-xaQ">
                                                     <rect key="frame" x="0.0" y="7" width="150" height="190"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nJA-Ly-diG">
@@ -76,6 +77,9 @@
                                                         </constraints>
                                                     </collectionViewCellContentView>
                                                     <size key="customSize" width="150" height="190"/>
+                                                    <connections>
+                                                        <segue destination="tlj-mw-Eyz" kind="show" id="ciA-NV-VA6"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -103,6 +107,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDr-08-hYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="816.03053435114498" y="27.464788732394368"/>
+        </scene>
+        <!--Recipe-->
+        <scene sceneID="h5t-BU-ZmN">
+            <objects>
+                <viewController id="tlj-mw-Eyz" customClass="MealDetailViewController" customModule="ThatMeal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEz-np-Ccm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-k2-pIe">
+                                <rect key="frame" x="16" y="102.99999999999999" width="361" height="238.66666666666663"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name(Nationality)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlY-nW-Sgi">
+                                <rect key="frame" x="8" y="349.66666666666669" width="377" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPh-V7-wsq">
+                                <rect key="frame" x="8" y="378" width="377" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auC-yw-QFd">
+                                <rect key="frame" x="8" y="433.66666666666669" width="377" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSy-gm-eLV">
+                                <rect key="frame" x="16" y="406.33333333333331" width="361" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient and Measure" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khM-Db-sHY">
+                                <rect key="frame" x="16" y="462.66666666666669" width="361" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ifc-zM-uJO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ifc-zM-uJO" firstAttribute="trailing" secondItem="KlY-nW-Sgi" secondAttribute="trailing" constant="8" id="2hd-0O-7ZO"/>
+                            <constraint firstItem="auC-yw-QFd" firstAttribute="top" secondItem="DSy-gm-eLV" secondAttribute="bottom" constant="8" id="7VD-i8-uOA"/>
+                            <constraint firstItem="ifc-zM-uJO" firstAttribute="trailing" secondItem="DSy-gm-eLV" secondAttribute="trailing" constant="16" id="FFs-W3-DNb"/>
+                            <constraint firstItem="SKK-k2-pIe" firstAttribute="leading" secondItem="ifc-zM-uJO" secondAttribute="leading" constant="16" id="OCn-PI-pnP"/>
+                            <constraint firstItem="ifc-zM-uJO" firstAttribute="trailing" secondItem="khM-Db-sHY" secondAttribute="trailing" constant="16" id="Qn8-sL-x79"/>
+                            <constraint firstItem="DSy-gm-eLV" firstAttribute="top" secondItem="EPh-V7-wsq" secondAttribute="bottom" constant="8" id="TEH-eb-JqY"/>
+                            <constraint firstItem="khM-Db-sHY" firstAttribute="leading" secondItem="ifc-zM-uJO" secondAttribute="leading" constant="16" id="YGh-nB-mht"/>
+                            <constraint firstItem="ifc-zM-uJO" firstAttribute="trailing" secondItem="SKK-k2-pIe" secondAttribute="trailing" constant="16" id="aFp-iH-sGO"/>
+                            <constraint firstItem="ifc-zM-uJO" firstAttribute="trailing" secondItem="EPh-V7-wsq" secondAttribute="trailing" constant="8" id="eSR-wh-n8S"/>
+                            <constraint firstItem="EPh-V7-wsq" firstAttribute="top" secondItem="KlY-nW-Sgi" secondAttribute="bottom" constant="8" id="hK7-CS-VlW"/>
+                            <constraint firstItem="KlY-nW-Sgi" firstAttribute="top" secondItem="SKK-k2-pIe" secondAttribute="bottom" constant="8" symbolic="YES" id="iSf-Ug-4qz"/>
+                            <constraint firstItem="KlY-nW-Sgi" firstAttribute="leading" secondItem="ifc-zM-uJO" secondAttribute="leading" constant="8" id="jyd-BT-zGa"/>
+                            <constraint firstItem="auC-yw-QFd" firstAttribute="leading" secondItem="ifc-zM-uJO" secondAttribute="leading" constant="8" id="k6V-ch-stg"/>
+                            <constraint firstItem="SKK-k2-pIe" firstAttribute="top" secondItem="ifc-zM-uJO" secondAttribute="top" id="kV5-2S-ntJ"/>
+                            <constraint firstItem="SKK-k2-pIe" firstAttribute="height" secondItem="lEz-np-Ccm" secondAttribute="height" multiplier="0.28" id="lRL-Dv-ab5"/>
+                            <constraint firstItem="DSy-gm-eLV" firstAttribute="leading" secondItem="ifc-zM-uJO" secondAttribute="leading" constant="16" id="laF-WF-Xim"/>
+                            <constraint firstItem="ifc-zM-uJO" firstAttribute="trailing" secondItem="auC-yw-QFd" secondAttribute="trailing" constant="8" id="oVv-tu-guW"/>
+                            <constraint firstItem="khM-Db-sHY" firstAttribute="top" secondItem="auC-yw-QFd" secondAttribute="bottom" constant="8" id="r82-jl-9He"/>
+                            <constraint firstItem="EPh-V7-wsq" firstAttribute="leading" secondItem="ifc-zM-uJO" secondAttribute="leading" constant="8" id="wJH-tL-ukl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recipe" id="PqV-It-KFs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMt-WX-QZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="evf-bn-MwO">
