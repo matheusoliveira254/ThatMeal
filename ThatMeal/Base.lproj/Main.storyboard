@@ -62,7 +62,7 @@
                                 <connections>
                                     <outlet property="categoryImageServiceRequestImageView" destination="X19-Ka-hg0" id="Jk3-Bk-0nc"/>
                                     <outlet property="categoryNameLabel" destination="UQw-Br-VZf" id="STE-fX-DTt"/>
-                                    <segue destination="qUL-zn-Jcb" kind="show" id="Jgj-4G-Uix"/>
+                                    <segue destination="qUL-zn-Jcb" kind="show" identifier="toMealListVC" id="Jgj-4G-Uix"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -80,19 +80,19 @@
         <!--Meal List-->
         <scene sceneID="pyT-hF-naX">
             <objects>
-                <collectionViewController id="qUL-zn-Jcb" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MealList" id="qUL-zn-Jcb" customClass="MealListCollectionViewController" customModule="ThatMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vCE-pI-QC7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="re5-pS-Wzk">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="174" height="190"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="oQy-8x-SWV" customClass="CategoriesCollectionViewCell" customModule="ThatMeal" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mealCell" id="oQy-8x-SWV" customClass="MealCollectionViewCell" customModule="ThatMeal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="174" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wq1-IV-pjm">
@@ -128,8 +128,8 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="174" height="190"/>
                                 <connections>
-                                    <outlet property="mealInCategoryImageView" destination="vEy-zc-Mn9" id="jhB-3y-Wb1"/>
-                                    <outlet property="mealInCategoryNameLabel" destination="h7x-xm-bNb" id="hx5-j2-HEU"/>
+                                    <outlet property="mealImageServiceRequestImageView" destination="vEy-zc-Mn9" id="NcY-4I-chy"/>
+                                    <outlet property="mealNameLabel" destination="h7x-xm-bNb" id="aCS-3u-mJB"/>
                                     <segue destination="tlj-mw-Eyz" kind="show" id="Cky-s9-Y6t"/>
                                 </connections>
                             </collectionViewCell>
@@ -143,7 +143,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXR-8U-31i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="27"/>
+            <point key="canvasLocation" x="1722.9007633587785" y="26.760563380281692"/>
         </scene>
         <!--Recipe-->
         <scene sceneID="h5t-BU-ZmN">
