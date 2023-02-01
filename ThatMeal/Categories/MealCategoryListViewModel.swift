@@ -13,9 +13,15 @@ protocol MealCategoryListViewModelDelegate: AnyObject {
 
 class MealCategoryListViewModel {
     private let categoriesService: CategoriesServiceable
-    var categoryName: [Category] = []
-    var meals: [Meal] = []
     weak var delegate: MealCategoryListViewModelDelegate?
+    var categoryName: [Category] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.delegate?.updateView()
+            }
+        }
+    }
+    var meals: [Meal] = []
     
     init(categoriesService: CategoriesServiceable = CategoriesService(), delegate: MealCategoryListViewModelDelegate) {
         self.categoriesService = categoriesService
@@ -28,23 +34,21 @@ class MealCategoryListViewModel {
             case .success(let categories):
                 self?.categoryName = []
                 self?.categoryName.append(contentsOf: categories.categories)
-//                DispatchQueue.main.async {
-//                    self?.delegate?.updateViews()
-//                }
             case .failure(let error):
                 print("Error fetching the data!", error.localizedDescription)
             }
         }
     }
     
-    func loadMealsInCategory(category: String) {
+    func loadMealsInCategory(category: String, completion: @escaping () -> Void) {
         categoriesService.fetchMealsInCategories(with: category) { [weak self] result in
             switch result {
             case .success(let meals):
                 self?.meals = []
                 self?.meals.append(contentsOf: meals.meals)
             case .failure(let error):
-                print("Error fetching the data!", error.localizedDescription)            }
+                print("Error fetching the data!", error.localizedDescription)
+            }
         }
     }
 }//End of class

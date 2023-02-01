@@ -13,4 +13,5 @@ struct TopLevelDictionaryCategory: Decodable {
 
 struct Category: Decodable {
     let strCategory: String?
+    let strCategoryThumb: String?
 }
