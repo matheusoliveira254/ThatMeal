@@ -12,6 +12,9 @@
 		A162416F298AE45B00292341 /* MealListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162416E298AE45B00292341 /* MealListDataProvider.swift */; };
 		A1624171298AE76A00292341 /* MealListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624170298AE76A00292341 /* MealListCollectionViewController.swift */; };
 		A1624173298AE94D00292341 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624172298AE94D00292341 /* MealCollectionViewCell.swift */; };
+		A1624175298B125C00292341 /* RecipeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624174298B125C00292341 /* RecipeDataProvider.swift */; };
+		A1624178298B127300292341 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624177298B127300292341 /* RecipeViewModel.swift */; };
+		A162417A298B128A00292341 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624179298B128A00292341 /* RecipeViewController.swift */; };
 		A1CD9560297B4B5700A7749D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD955F297B4B5700A7749D /* AppDelegate.swift */; };
 		A1CD9562297B4B5700A7749D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9561297B4B5700A7749D /* SceneDelegate.swift */; };
 		A1CD9564297B4B5700A7749D /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9563297B4B5700A7749D /* MealDetailViewController.swift */; };
@@ -35,6 +38,9 @@
 		A162416E298AE45B00292341 /* MealListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListDataProvider.swift; sourceTree = "<group>"; };
 		A1624170298AE76A00292341 /* MealListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCollectionViewController.swift; sourceTree = "<group>"; };
 		A1624172298AE94D00292341 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1624174298B125C00292341 /* RecipeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataProvider.swift; sourceTree = "<group>"; };
+		A1624177298B127300292341 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		A1624179298B128A00292341 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		A1CD955C297B4B5700A7749D /* ThatMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CD955F297B4B5700A7749D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1CD9561297B4B5700A7749D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,16 @@
 			path = "Meal List";
 			sourceTree = "<group>";
 		};
+		A1624176298B126000292341 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				A1624174298B125C00292341 /* RecipeDataProvider.swift */,
+				A1624177298B127300292341 /* RecipeViewModel.swift */,
+				A1624179298B128A00292341 /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
 		A1CD9553297B4B5700A7749D = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,7 @@
 				A1CD9584297B7DF100A7749D /* Services */,
 				A1CD957D297B77A200A7749D /* Categories */,
 				A162416D298AE3BC00292341 /* Meal List */,
+				A1624176298B126000292341 /* Recipe */,
 			);
 			path = ThatMeal;
 			sourceTree = "<group>";
@@ -220,8 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1624175298B125C00292341 /* RecipeDataProvider.swift in Sources */,
+				A1624178298B127300292341 /* RecipeViewModel.swift in Sources */,
 				A1CD9577297B635400A7749D /* Category.swift in Sources */,
 				A1CD958A297BAD0B00A7749D /* CategoriesCollectionViewCell.swift in Sources */,
+				A162417A298B128A00292341 /* RecipeViewController.swift in Sources */,
 				A1CD957C297B63A700A7749D /* Recipe.swift in Sources */,
 				A162416A298ADD3900292341 /* CategoriesCollectionViewController.swift in Sources */,
 				A1624173298AE94D00292341 /* MealCollectionViewCell.swift in Sources */,

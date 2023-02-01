@@ -11,7 +11,7 @@ private let reuseIdentifier = "Cell"
 
 class MealListCollectionViewController: UICollectionViewController {
 
-    var viewModel: MealListViewModel!
+    private var viewModel: MealListViewModel!
     var categoryToReceive: String?
     
     override func viewDidLoad() {

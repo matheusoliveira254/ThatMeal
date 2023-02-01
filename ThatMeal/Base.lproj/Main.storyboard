@@ -148,7 +148,7 @@
         <!--Recipe-->
         <scene sceneID="h5t-BU-ZmN">
             <objects>
-                <viewController id="tlj-mw-Eyz" customClass="MealDetailViewController" customModule="ThatMeal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tlj-mw-Eyz" customClass="RecipeViewController" customModule="ThatMeal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lEz-np-Ccm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,6 +234,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recipe" id="PqV-It-KFs"/>
+                    <connections>
+                        <outlet property="ingredientsAndMeasuresLabel" destination="khM-Db-sHY" id="6pp-8f-IRP"/>
+                        <outlet property="mealCategoryLabel" destination="EPh-V7-wsq" id="Grr-Wm-bEc"/>
+                        <outlet property="mealImageImageView" destination="SKK-k2-pIe" id="yf3-Ri-AIK"/>
+                        <outlet property="mealInstructionsLabel" destination="DSy-gm-eLV" id="Mmf-6e-cKM"/>
+                        <outlet property="mealNameAndNationalityLabel" destination="KlY-nW-Sgi" id="XZ6-pL-qcx"/>
+                        <outlet property="youtubeLinkTextView" destination="8kM-21-LCY" id="C8t-c3-6PW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMt-WX-QZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

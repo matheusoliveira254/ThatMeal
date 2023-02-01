@@ -15,6 +15,7 @@ struct Recipe: Decodable {
     let strCategory: String?
     let strArea: String?
     let strInstructions: String?
+    let strYoutube: String?
     let strIngredient1: String?
     let strIngredient2: String?
     let strIngredient3: String?
