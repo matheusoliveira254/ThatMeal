@@ -11,7 +11,7 @@ struct TopLevelDictionaryRecipe: Decodable {
     let meals: [Recipe]
 }
 
-struct Recipe: Decodable {
+struct Recipe {
     let meal: String?
     let category: String?
     let area: String?
@@ -19,6 +19,23 @@ struct Recipe: Decodable {
     let thumb: String?
     let youtube: String?
     let ingredients: [Ingredient]
+    
+    var ingredientsString: String {
+        var result: String = ""
+        ingredients.forEach {
+            let ingredientPairString = "\($0.name) : \($0.measurement)\n"
+            result.append(ingredientPairString)
+        }
+        return result
+    }
+}
+
+struct Ingredient: Decodable {
+    let name: String
+    let measurement: String
+}
+
+extension Recipe: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case meal = "strMeal"
@@ -28,6 +45,29 @@ struct Recipe: Decodable {
         case thumb = "strThumb"
         case youtube = "strYoutube"
         case ingredients
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try? decoder.container(keyedBy: CodingKeys.self)
+        self.meal = try? container?.decode(String.self, forKey: .meal)
+        self.category = try? container?.decode(String.self, forKey: .category)
+        self.area = try? container?.decode(String.self, forKey: .area)
+        self.instructions = try? container?.decode(String.self, forKey: .instructions)
+        self.thumb = try? container?.decode(String.self, forKey: .thumb)
+        self.youtube = try? container?.decode(String.self, forKey: .youtube)
+        
+        let ingredientNamesContainer = try? decoder.container(keyedBy: IngredientCodingKeys.self)
+        let measurementsContainer = try? decoder.container(keyedBy: MeasurementsCodingKeys.self)
+        let ingredients: [Ingredient] = IngredientCodingKeys.allCases.enumerated().compactMap {
+            guard let name = try? ingredientNamesContainer?.decode(String.self, forKey: $0.element),
+                  let measurement = try? measurementsContainer?.decode(String.self, forKey: MeasurementsCodingKeys.allCases[$0.offset]),
+                  !name.isEmpty,
+                  !measurement.isEmpty
+            else { return nil }
+            
+            return Ingredient(name: name, measurement: measurement)
+        }
+        self.ingredients = ingredients
     }
     
     private enum IngredientCodingKeys: String, CodingKey, CaseIterable {
@@ -75,32 +115,4 @@ struct Recipe: Decodable {
         case strMeasure19
         case strMeasure20
     }
-    
-    init(from decoder: Decoder) throws {
-        let container = try? decoder.container(keyedBy: CodingKeys.self)
-        self.meal = try? container?.decode(String.self, forKey: .meal)
-        self.category = try? container?.decode(String.self, forKey: .category)
-        self.area = try? container?.decode(String.self, forKey: .area)
-        self.instructions = try? container?.decode(String.self, forKey: .instructions)
-        self.thumb = try? container?.decode(String.self, forKey: .thumb)
-        self.youtube = try? container?.decode(String.self, forKey: .youtube)
-        
-        let ingredientNamesContainer = try? decoder.container(keyedBy: IngredientCodingKeys.self)
-        let measurementsContainer = try? decoder.container(keyedBy: MeasurementsCodingKeys.self)
-        let ingredients: [Ingredient] = IngredientCodingKeys.allCases.enumerated().compactMap { thing in
-            guard let name = try? ingredientNamesContainer?.decode(String.self, forKey: thing.element),
-                  let measurement = try? measurementsContainer?.decode(String.self, forKey: MeasurementsCodingKeys.allCases[thing.offset]),
-                  !name.isEmpty,
-                  !measurement.isEmpty
-            else { return nil }
-            
-            return Ingredient(name: name, measurement: measurement)
-        }
-        self.ingredients = ingredients
-    }
-}
-
-struct Ingredient: Decodable {
-    let name: String
-    let measurement: String
 }

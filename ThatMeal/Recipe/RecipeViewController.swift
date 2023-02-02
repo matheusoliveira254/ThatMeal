@@ -36,9 +36,10 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate {
         mealCategoryLabel.text = recipe.category
         mealInstructionsLabel.text = recipe.instructions
         youtubeLinkTextView.text = recipe.youtube
-        addIngredientsToVar {
-            self.ingredientsAndMeasuresLabel.text = self.ingredientsAndMeasuresText
-        }
+//        addIngredientsToVar {
+//            self.ingredientsAndMeasuresLabel.text = self.ingredientsAndMeasuresText
+//        }
+        ingredientsAndMeasuresLabel.text = recipe.ingredientsString
     }
     
     func addIngredientsToVar(completion: @escaping () -> Void) {
@@ -51,3 +52,6 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate {
         mealImageImageView.fetch(using: imageURL)
     }
 }//End of Class
+
+// Ingredients:
+//"pickle jucie" : "1/4 cup"
