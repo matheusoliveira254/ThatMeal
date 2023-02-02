@@ -12,9 +12,11 @@ struct TopLevelDictionaryRecipe: Decodable {
 }
 
 struct Recipe: Decodable {
+    let strMeal: String?
     let strCategory: String?
     let strArea: String?
     let strInstructions: String?
+    let strThumb: String?
     let strYoutube: String?
     let strIngredient1: String?
     let strIngredient2: String?

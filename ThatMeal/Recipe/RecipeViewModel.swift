@@ -8,13 +8,19 @@
 import Foundation
 
 protocol RecipeViewModelDelegate: AnyObject {
-    func updateView()
+    func populateView()
 }
 
 class RecipeViewModel {
     private let recipeService: RecipeServiceable
     weak var delegate: RecipeViewModelDelegate?
-    var recipe: [Recipe] = []
+    var recipe: [Recipe] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.delegate?.populateView()
+            }
+        }
+    }
     
     init(recipeService: RecipeServiceable = RecipeService(), delegate: RecipeViewModelDelegate) {
         self.recipeService = recipeService

@@ -130,7 +130,7 @@
                                 <connections>
                                     <outlet property="mealImageServiceRequestImageView" destination="vEy-zc-Mn9" id="NcY-4I-chy"/>
                                     <outlet property="mealNameLabel" destination="h7x-xm-bNb" id="aCS-3u-mJB"/>
-                                    <segue destination="tlj-mw-Eyz" kind="show" id="Cky-s9-Y6t"/>
+                                    <segue destination="tlj-mw-Eyz" kind="show" identifier="toRecipeVc" id="Cky-s9-Y6t"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -153,7 +153,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-k2-pIe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKK-k2-pIe" customClass="ServiceRequestImageView" customModule="ThatMeal" customModuleProvider="target">
                                 <rect key="frame" x="16" y="102.99999999999999" width="361" height="238.66666666666663"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name(Nationality)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlY-nW-Sgi">
@@ -169,31 +169,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auC-yw-QFd">
-                                <rect key="frame" x="8" y="433.66666666666669" width="377" height="21"/>
+                                <rect key="frame" x="8" y="421.66666666666669" width="377" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSy-gm-eLV">
-                                <rect key="frame" x="16" y="406.33333333333331" width="361" height="19.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <rect key="frame" x="16" y="406.33333333333331" width="361" height="7.3333333333333144"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="6"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient and Measure" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khM-Db-sHY">
-                                <rect key="frame" x="16" y="462.66666666666669" width="361" height="19.333333333333314"/>
+                                <rect key="frame" x="16" y="450.66666666666669" width="361" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vId-A9-926">
-                                <rect key="frame" x="8" y="490" width="377" height="21"/>
+                                <rect key="frame" x="8" y="478" width="377" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8kM-21-LCY">
-                                <rect key="frame" x="8" y="519" width="377" height="40"/>
+                                <rect key="frame" x="8" y="507" width="377" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VRX-c9-Cio"/>
@@ -237,7 +237,7 @@
                     <connections>
                         <outlet property="ingredientsAndMeasuresLabel" destination="khM-Db-sHY" id="6pp-8f-IRP"/>
                         <outlet property="mealCategoryLabel" destination="EPh-V7-wsq" id="Grr-Wm-bEc"/>
-                        <outlet property="mealImageImageView" destination="SKK-k2-pIe" id="yf3-Ri-AIK"/>
+                        <outlet property="mealImageImageView" destination="SKK-k2-pIe" id="DSD-NA-ajQ"/>
                         <outlet property="mealInstructionsLabel" destination="DSy-gm-eLV" id="Mmf-6e-cKM"/>
                         <outlet property="mealNameAndNationalityLabel" destination="KlY-nW-Sgi" id="XZ6-pL-qcx"/>
                         <outlet property="youtubeLinkTextView" destination="8kM-21-LCY" id="C8t-c3-6PW"/>
