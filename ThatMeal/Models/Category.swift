@@ -8,9 +8,10 @@
 import Foundation
 
 struct TopLevelDictionaryCategory: Decodable {
-    let categories: Category
+    let categories: [Category]
 }
 
 struct Category: Decodable {
     let strCategory: String?
+    let strCategoryThumb: String?
 }

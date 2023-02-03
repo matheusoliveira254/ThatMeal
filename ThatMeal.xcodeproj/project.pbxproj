@@ -7,19 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A150B372298DA9BC00592208 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150B371298DA9BB00592208 /* NSAttributedStringExtension.swift */; };
+		A162416A298ADD3900292341 /* CategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624169298ADD3900292341 /* CategoriesCollectionViewController.swift */; };
+		A162416C298AE3B700292341 /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162416B298AE3B700292341 /* MealListViewModel.swift */; };
+		A162416F298AE45B00292341 /* MealListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162416E298AE45B00292341 /* MealListDataProvider.swift */; };
+		A1624171298AE76A00292341 /* MealListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624170298AE76A00292341 /* MealListCollectionViewController.swift */; };
+		A1624173298AE94D00292341 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624172298AE94D00292341 /* MealCollectionViewCell.swift */; };
+		A1624175298B125C00292341 /* RecipeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624174298B125C00292341 /* RecipeDataProvider.swift */; };
+		A1624178298B127300292341 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624177298B127300292341 /* RecipeViewModel.swift */; };
+		A162417A298B128A00292341 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624179298B128A00292341 /* RecipeViewController.swift */; };
 		A1CD9560297B4B5700A7749D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD955F297B4B5700A7749D /* AppDelegate.swift */; };
 		A1CD9562297B4B5700A7749D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9561297B4B5700A7749D /* SceneDelegate.swift */; };
 		A1CD9564297B4B5700A7749D /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9563297B4B5700A7749D /* MealDetailViewController.swift */; };
 		A1CD9567297B4B5700A7749D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CD9565297B4B5700A7749D /* Main.storyboard */; };
 		A1CD9569297B4B5800A7749D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CD9568297B4B5800A7749D /* Assets.xcassets */; };
 		A1CD956C297B4B5800A7749D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CD956A297B4B5800A7749D /* LaunchScreen.storyboard */; };
-		A1CD9575297B5EFA00A7749D /* MealCategoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9574297B5EFA00A7749D /* MealCategoryListTableViewController.swift */; };
 		A1CD9577297B635400A7749D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9576297B635400A7749D /* Category.swift */; };
 		A1CD957A297B639800A7749D /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9579297B639800A7749D /* MealList.swift */; };
 		A1CD957C297B63A700A7749D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD957B297B63A700A7749D /* Recipe.swift */; };
+		A1CD957F297B782B00A7749D /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD957E297B782B00A7749D /* CategoryListViewModel.swift */; };
+		A1CD9581297B788A00A7749D /* CategoriesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9580297B788A00A7749D /* CategoriesDataProvider.swift */; };
+		A1CD9583297B7DE300A7749D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9582297B7DE300A7749D /* APIService.swift */; };
+		A1CD9586297B7E8000A7749D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9585297B7E8000A7749D /* NetworkError.swift */; };
+		A1CD958A297BAD0B00A7749D /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD9589297BAD0B00A7749D /* CategoriesCollectionViewCell.swift */; };
+		A1CD958C297BB3B100A7749D /* ImageRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD958B297BB3B100A7749D /* ImageRequestService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A150B371298DA9BB00592208 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
+		A1624169298ADD3900292341 /* CategoriesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewController.swift; sourceTree = "<group>"; };
+		A162416B298AE3B700292341 /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
+		A162416E298AE45B00292341 /* MealListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListDataProvider.swift; sourceTree = "<group>"; };
+		A1624170298AE76A00292341 /* MealListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCollectionViewController.swift; sourceTree = "<group>"; };
+		A1624172298AE94D00292341 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1624174298B125C00292341 /* RecipeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataProvider.swift; sourceTree = "<group>"; };
+		A1624177298B127300292341 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		A1624179298B128A00292341 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		A1CD955C297B4B5700A7749D /* ThatMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CD955F297B4B5700A7749D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1CD9561297B4B5700A7749D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,10 +51,15 @@
 		A1CD9568297B4B5800A7749D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1CD956B297B4B5800A7749D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1CD956D297B4B5800A7749D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1CD9574297B5EFA00A7749D /* MealCategoryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryListTableViewController.swift; sourceTree = "<group>"; };
 		A1CD9576297B635400A7749D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A1CD9579297B639800A7749D /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		A1CD957B297B63A700A7749D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		A1CD957E297B782B00A7749D /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
+		A1CD9580297B788A00A7749D /* CategoriesDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataProvider.swift; sourceTree = "<group>"; };
+		A1CD9582297B7DE300A7749D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A1CD9585297B7E8000A7749D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A1CD9589297BAD0B00A7749D /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1CD958B297BB3B100A7749D /* ImageRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequestService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +73,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A162416D298AE3BC00292341 /* Meal List */ = {
+			isa = PBXGroup;
+			children = (
+				A162416E298AE45B00292341 /* MealListDataProvider.swift */,
+				A162416B298AE3B700292341 /* MealListViewModel.swift */,
+				A1624170298AE76A00292341 /* MealListCollectionViewController.swift */,
+				A1624172298AE94D00292341 /* MealCollectionViewCell.swift */,
+			);
+			path = "Meal List";
+			sourceTree = "<group>";
+		};
+		A1624176298B126000292341 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				A1624174298B125C00292341 /* RecipeDataProvider.swift */,
+				A1624177298B127300292341 /* RecipeViewModel.swift */,
+				A1624179298B128A00292341 /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
 		A1CD9553297B4B5700A7749D = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +117,11 @@
 				A1CD9563297B4B5700A7749D /* MealDetailViewController.swift */,
 				A1CD9565297B4B5700A7749D /* Main.storyboard */,
 				A1CD956A297B4B5800A7749D /* LaunchScreen.storyboard */,
-				A1CD9574297B5EFA00A7749D /* MealCategoryListTableViewController.swift */,
 				A1CD9578297B635800A7749D /* Models */,
+				A1CD9584297B7DF100A7749D /* Services */,
+				A1CD957D297B77A200A7749D /* Categories */,
+				A162416D298AE3BC00292341 /* Meal List */,
+				A1624176298B126000292341 /* Recipe */,
 			);
 			path = ThatMeal;
 			sourceTree = "<group>";
@@ -93,6 +145,28 @@
 				A1CD957B297B63A700A7749D /* Recipe.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A1CD957D297B77A200A7749D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD9580297B788A00A7749D /* CategoriesDataProvider.swift */,
+				A1CD957E297B782B00A7749D /* CategoryListViewModel.swift */,
+				A1624169298ADD3900292341 /* CategoriesCollectionViewController.swift */,
+				A1CD9589297BAD0B00A7749D /* CategoriesCollectionViewCell.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A1CD9584297B7DF100A7749D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD9582297B7DE300A7749D /* APIService.swift */,
+				A1CD9585297B7E8000A7749D /* NetworkError.swift */,
+				A1CD958B297BB3B100A7749D /* ImageRequestService.swift */,
+				A150B371298DA9BB00592208 /* NSAttributedStringExtension.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,13 +240,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1CD9575297B5EFA00A7749D /* MealCategoryListTableViewController.swift in Sources */,
+				A1624175298B125C00292341 /* RecipeDataProvider.swift in Sources */,
+				A1624178298B127300292341 /* RecipeViewModel.swift in Sources */,
 				A1CD9577297B635400A7749D /* Category.swift in Sources */,
+				A150B372298DA9BC00592208 /* NSAttributedStringExtension.swift in Sources */,
+				A1CD958A297BAD0B00A7749D /* CategoriesCollectionViewCell.swift in Sources */,
+				A162417A298B128A00292341 /* RecipeViewController.swift in Sources */,
 				A1CD957C297B63A700A7749D /* Recipe.swift in Sources */,
+				A162416A298ADD3900292341 /* CategoriesCollectionViewController.swift in Sources */,
+				A1624173298AE94D00292341 /* MealCollectionViewCell.swift in Sources */,
+				A162416F298AE45B00292341 /* MealListDataProvider.swift in Sources */,
 				A1CD957A297B639800A7749D /* MealList.swift in Sources */,
+				A1CD9581297B788A00A7749D /* CategoriesDataProvider.swift in Sources */,
+				A1CD958C297BB3B100A7749D /* ImageRequestService.swift in Sources */,
 				A1CD9564297B4B5700A7749D /* MealDetailViewController.swift in Sources */,
+				A1CD9583297B7DE300A7749D /* APIService.swift in Sources */,
 				A1CD9560297B4B5700A7749D /* AppDelegate.swift in Sources */,
 				A1CD9562297B4B5700A7749D /* SceneDelegate.swift in Sources */,
+				A1624171298AE76A00292341 /* MealListCollectionViewController.swift in Sources */,
+				A1CD9586297B7E8000A7749D /* NetworkError.swift in Sources */,
+				A1CD957F297B782B00A7749D /* CategoryListViewModel.swift in Sources */,
+				A162416C298AE3B700292341 /* MealListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
