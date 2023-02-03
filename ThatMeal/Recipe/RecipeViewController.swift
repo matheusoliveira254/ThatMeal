@@ -23,24 +23,18 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
         super.viewDidLoad()
         self.viewModel = RecipeViewModel(delegate: self)
         youtubeLinkTextView.delegate = self
-        youtubeLinkTextView.isEditable = false
-        youtubeLinkTextView.isSelectable = true
         if let mealName = mealToReceive {
             viewModel.loadRecipe(recipeName: mealName) 
         }
     }
     
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        guard UIApplication.shared.canOpenURL(URL) else {showError("Invalid Youtube Link."); return false}
-        
-        UIApplication.shared.open(URL)
-        return false
-    }
-    
-    private func showError(_ message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
+    func updateTextView() {
+        guard let path = viewModel.recipe.first?.youtube,
+              let text = youtubeLinkTextView.text else {return}
+              let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: text)
+        let font = youtubeLinkTextView.font
+        youtubeLinkTextView.attributedText = attributedString
+        youtubeLinkTextView.font = font
     }
     
     func populateView() {
@@ -55,8 +49,8 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
         mealNameAndNationalityLabel.text = "\(mealName)(\(mealNationality))"
         mealCategoryLabel.text = recipe.category
         mealInstructionsLabel.text = recipe.instructions
-//        youtubeLinkTextView.text = recipe.youtube
         ingredientsAndMeasuresLabel.text = recipe.ingredientsString
+        updateTextView()
     }
     
     func fetchImage(url: String?) {

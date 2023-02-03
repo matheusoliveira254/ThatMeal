@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A150B372298DA9BC00592208 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150B371298DA9BB00592208 /* NSAttributedStringExtension.swift */; };
 		A162416A298ADD3900292341 /* CategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1624169298ADD3900292341 /* CategoriesCollectionViewController.swift */; };
 		A162416C298AE3B700292341 /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162416B298AE3B700292341 /* MealListViewModel.swift */; };
 		A162416F298AE45B00292341 /* MealListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162416E298AE45B00292341 /* MealListDataProvider.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A150B371298DA9BB00592208 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		A1624169298ADD3900292341 /* CategoriesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		A162416B298AE3B700292341 /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 		A162416E298AE45B00292341 /* MealListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListDataProvider.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				A1CD9582297B7DE300A7749D /* APIService.swift */,
 				A1CD9585297B7E8000A7749D /* NetworkError.swift */,
 				A1CD958B297BB3B100A7749D /* ImageRequestService.swift */,
+				A150B371298DA9BB00592208 /* NSAttributedStringExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				A1624175298B125C00292341 /* RecipeDataProvider.swift in Sources */,
 				A1624178298B127300292341 /* RecipeViewModel.swift in Sources */,
 				A1CD9577297B635400A7749D /* Category.swift in Sources */,
+				A150B372298DA9BC00592208 /* NSAttributedStringExtension.swift in Sources */,
 				A1CD958A297BAD0B00A7749D /* CategoriesCollectionViewCell.swift in Sources */,
 				A162417A298B128A00292341 /* RecipeViewController.swift in Sources */,
 				A1CD957C297B63A700A7749D /* Recipe.swift in Sources */,
