@@ -31,14 +31,15 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate {
     
     func populateView() {
         guard let recipe = viewModel.recipe.first else {return}
-        fetchImage(url: recipe.strThumb)
-        mealNameAndNationalityLabel.text = "\(recipe.strMeal)(\(recipe.strArea))"
-        mealCategoryLabel.text = recipe.strCategory
-        mealInstructionsLabel.text = recipe.strInstructions
-        youtubeLinkTextView.text = recipe.strYoutube
-        addIngredientsToVar {
-            self.ingredientsAndMeasuresLabel.text = self.ingredientsAndMeasuresText
-        }
+        fetchImage(url: recipe.thumb)
+        mealNameAndNationalityLabel.text = "\(recipe.meal)(\(recipe.area))"
+        mealCategoryLabel.text = recipe.category
+        mealInstructionsLabel.text = recipe.instructions
+        youtubeLinkTextView.text = recipe.youtube
+//        addIngredientsToVar {
+//            self.ingredientsAndMeasuresLabel.text = self.ingredientsAndMeasuresText
+//        }
+        ingredientsAndMeasuresLabel.text = recipe.ingredientsString
     }
     
     func addIngredientsToVar(completion: @escaping () -> Void) {
@@ -51,3 +52,6 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate {
         mealImageImageView.fetch(using: imageURL)
     }
 }//End of Class
+
+// Ingredients:
+//"pickle jucie" : "1/4 cup"

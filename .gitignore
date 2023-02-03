@@ -1,0 +1,30 @@
+xcuserdata/
+target/
+.DS_Store
+Breakpoints.xcbkptlist
+*.xccheckout
+*.xcscmblueprint
+.idea/
+*.orig
+*.swp
+.gradle/
+ReactiveCocoa-Frameworks/
+/build
+Carthage/Checkouts
+!Carthage/Build
+
+# fastlane specific
+fastlane/report.xml
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots
+
+# scan temporary files
+fastlane/test_output
+tickets_changed.*
+tickets_urls.txt
+Pods/
+settings-dev.gradle
