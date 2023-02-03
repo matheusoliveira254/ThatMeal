@@ -50,10 +50,11 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
     func populateView() {
         guard let recipe = viewModel.recipe.first,
               let mealName = recipe.meal,
-              let nationality = recipe.area else {return}
+              let mealNationality = recipe.area else {return}
         
         fetchImage(url: recipe.thumb)
-        mealNameAndNationalityLabel.text = "\(mealName)(\(nationality))"
+        makeRounded()
+        mealNameAndNationalityLabel.text = "\(mealName)(\(mealNationality))"
         mealCategoryLabel.text = recipe.category
         mealInstructionsLabel.text = recipe.instructions
 //        youtubeLinkTextView.text = recipe.youtube
@@ -63,5 +64,10 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
     func fetchImage(url: String?) {
         guard let imageURL = URL(string: url ?? "Empty image URL") else {return}
         mealImageImageView.fetch(using: imageURL)
+    }
+    
+    func makeRounded() {
+        mealImageImageView.layer.cornerRadius = 20
+        mealImageImageView.clipsToBounds = true
     }
 }//End of Class

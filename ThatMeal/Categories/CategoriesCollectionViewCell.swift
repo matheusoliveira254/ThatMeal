@@ -15,11 +15,17 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     func configureCollectionViewCell(category: Category?) {
         guard let category = category else {return}
         fetchImage(for: category)
+        makeRounded()
         categoryNameLabel.text = category.strCategory
     }
     
     func fetchImage(for category: Category) {
         guard let imageURL = URL(string: category.strCategoryThumb ?? "Empty image URL") else {return}
         categoryImageServiceRequestImageView.fetch(using: imageURL)
+    }
+    
+    func makeRounded() {
+        categoryImageServiceRequestImageView.layer.cornerRadius = 45
+        categoryImageServiceRequestImageView.clipsToBounds = true
     }
 }//End of class
