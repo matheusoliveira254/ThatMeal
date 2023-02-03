@@ -157,7 +157,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydb-aB-jH8" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="540.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="513.33333333333337"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KVh-1p-YTv" customClass="ServiceRequestImageView" customModule="ThatMeal" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
@@ -202,38 +202,36 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch on Youtube:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmn-3M-LrW">
-                                                <rect key="frame" x="16" y="459.33333333333337" width="361" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Youtube link..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zPK-q0-9Lu">
-                                                <rect key="frame" x="16" y="488.33333333333337" width="361" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="efo-0l-bon">
+                                                <rect key="frame" x="16" y="459.33333333333337" width="361" height="46"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="O9A-sT-6ef"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="zPK-q0-9Lu" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="01y-Ff-X7i"/>
                                             <constraint firstAttribute="trailing" secondItem="cXF-fU-ICG" secondAttribute="trailing" constant="16" id="2CY-fN-GYt"/>
                                             <constraint firstAttribute="trailing" secondItem="a6I-Ze-wl3" secondAttribute="trailing" constant="16" id="4fh-hh-MA1"/>
                                             <constraint firstItem="i2Y-h5-8jW" firstAttribute="top" secondItem="PLI-uh-TnE" secondAttribute="bottom" constant="8" id="6Fu-3U-DrC"/>
-                                            <constraint firstItem="Vmn-3M-LrW" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="6MM-3V-RMW"/>
                                             <constraint firstItem="KVh-1p-YTv" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" id="7OK-N4-jrJ"/>
                                             <constraint firstItem="PLI-uh-TnE" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="7dB-wZ-ZAg"/>
-                                            <constraint firstAttribute="trailing" secondItem="zPK-q0-9Lu" secondAttribute="trailing" constant="16" id="HCf-f8-751"/>
+                                            <constraint firstItem="efo-0l-bon" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="7fq-XP-GCc"/>
                                             <constraint firstItem="GEH-qK-Cuq" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="Hjk-LF-ike"/>
                                             <constraint firstItem="a6I-Ze-wl3" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="Jgn-nM-gb5"/>
                                             <constraint firstAttribute="trailing" secondItem="PLI-uh-TnE" secondAttribute="trailing" constant="16" id="K4L-VP-NtA"/>
                                             <constraint firstItem="i2Y-h5-8jW" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="LyC-qQ-xcs"/>
+                                            <constraint firstItem="efo-0l-bon" firstAttribute="top" secondItem="GEH-qK-Cuq" secondAttribute="bottom" constant="12" id="ShV-vx-Ogb"/>
                                             <constraint firstAttribute="trailing" secondItem="Kp7-hy-138" secondAttribute="trailing" constant="16" id="YUZ-4m-1RY"/>
-                                            <constraint firstItem="zPK-q0-9Lu" firstAttribute="top" secondItem="Vmn-3M-LrW" secondAttribute="bottom" constant="8" id="csv-Zb-jov"/>
+                                            <constraint firstAttribute="bottom" secondItem="efo-0l-bon" secondAttribute="bottom" constant="8" id="b5b-e4-R1K"/>
+                                            <constraint firstAttribute="trailing" secondItem="efo-0l-bon" secondAttribute="trailing" constant="16" id="dXj-R0-sOl"/>
                                             <constraint firstItem="cXF-fU-ICG" firstAttribute="top" secondItem="Kp7-hy-138" secondAttribute="bottom" constant="6" id="eKk-vS-nj0"/>
                                             <constraint firstAttribute="trailing" secondItem="KVh-1p-YTv" secondAttribute="trailing" id="eZx-1d-eSg"/>
                                             <constraint firstAttribute="trailing" secondItem="i2Y-h5-8jW" secondAttribute="trailing" constant="16" id="kNe-2Q-Lhw"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vmn-3M-LrW" secondAttribute="trailing" constant="16" id="mXU-IE-bZK"/>
                                             <constraint firstItem="a6I-Ze-wl3" firstAttribute="top" secondItem="i2Y-h5-8jW" secondAttribute="bottom" constant="12" id="nuX-vi-pv8"/>
                                             <constraint firstItem="Kp7-hy-138" firstAttribute="top" secondItem="KVh-1p-YTv" secondAttribute="bottom" constant="12" id="o2y-fo-3Oc"/>
                                             <constraint firstItem="GEH-qK-Cuq" firstAttribute="top" secondItem="a6I-Ze-wl3" secondAttribute="bottom" constant="8" id="r2t-7e-zJk"/>
@@ -241,9 +239,7 @@
                                             <constraint firstAttribute="trailing" secondItem="GEH-qK-Cuq" secondAttribute="trailing" constant="16" id="sgH-Uf-1ik"/>
                                             <constraint firstItem="PLI-uh-TnE" firstAttribute="top" secondItem="cXF-fU-ICG" secondAttribute="bottom" constant="12" id="v81-Of-KLj"/>
                                             <constraint firstItem="KVh-1p-YTv" firstAttribute="top" secondItem="ydb-aB-jH8" secondAttribute="top" id="vhn-yF-aaB"/>
-                                            <constraint firstAttribute="bottom" secondItem="zPK-q0-9Lu" secondAttribute="bottom" constant="18" id="zKe-tR-J8C"/>
                                             <constraint firstItem="Kp7-hy-138" firstAttribute="leading" secondItem="ydb-aB-jH8" secondAttribute="leading" constant="16" id="zSw-72-l8f"/>
-                                            <constraint firstItem="Vmn-3M-LrW" firstAttribute="top" secondItem="GEH-qK-Cuq" secondAttribute="bottom" constant="12" id="zs9-X5-NtW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -276,12 +272,12 @@
                         <outlet property="mealImageImageView" destination="KVh-1p-YTv" id="zsk-84-43u"/>
                         <outlet property="mealInstructionsLabel" destination="i2Y-h5-8jW" id="smY-nw-RIm"/>
                         <outlet property="mealNameAndNationalityLabel" destination="Kp7-hy-138" id="SVz-qN-4tK"/>
-                        <outlet property="youtubeLinkTextField" destination="zPK-q0-9Lu" id="BMm-lg-zcu"/>
+                        <outlet property="youtubeLinkTextView" destination="efo-0l-bon" id="POY-2s-jej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2A-9z-b5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2301.5267175572517" y="26.760563380281692"/>
+            <point key="canvasLocation" x="2191.6030534351144" y="26.760563380281692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lSx-Qq-ho1">
@@ -303,6 +299,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

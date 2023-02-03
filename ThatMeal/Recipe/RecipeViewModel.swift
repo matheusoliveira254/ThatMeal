@@ -27,7 +27,7 @@ class RecipeViewModel {
         self.delegate = delegate
     }
     
-    func loadRecipe(recipeName: String) {
+    func loadRecipe(recipeName: String, completion: @escaping () -> Void) {
         recipeService.fetchRecipe(with: recipeName) { [weak self] result in
             switch result {
             case .success(let recipe):
