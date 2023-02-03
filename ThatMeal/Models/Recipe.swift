@@ -42,7 +42,7 @@ extension Recipe: Decodable {
         case category = "strCategory"
         case area = "strArea"
         case instructions = "strInstructions"
-        case thumb = "strThumb"
+        case thumb = "strMealThumb"
         case youtube = "strYoutube"
         case ingredients
     }

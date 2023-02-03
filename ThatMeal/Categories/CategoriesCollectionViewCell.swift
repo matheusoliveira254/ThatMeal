@@ -14,9 +14,11 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     func configureCollectionViewCell(category: Category?) {
         guard let category = category else {return}
-        fetchImage(for: category)
-        makeRounded()
-        categoryNameLabel.text = category.strCategory
+        DispatchQueue.main.async {
+            self.fetchImage(for: category)
+            self.makeRounded()
+            self.categoryNameLabel.text = category.strCategory
+        }
     }
     
     func fetchImage(for category: Category) {

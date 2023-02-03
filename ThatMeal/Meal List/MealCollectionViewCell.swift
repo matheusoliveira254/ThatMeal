@@ -14,9 +14,11 @@ class MealCollectionViewCell: UICollectionViewCell {
     
     func configureMealCollectionViewCell(meal: Meal?) {
         guard let meal = meal else {return}
-        fetchImage(for: meal)
-        makeRounded()
-        mealNameLabel.text = meal.strMeal
+        DispatchQueue.main.async {
+            self.fetchImage(for: meal)
+            self.makeRounded()
+            self.mealNameLabel.text = meal.strMeal
+        }
     }
     
     func fetchImage(for meal: Meal) {

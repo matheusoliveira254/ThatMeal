@@ -26,11 +26,7 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
         youtubeLinkTextView.isEditable = false
         youtubeLinkTextView.isSelectable = true
         if let mealName = mealToReceive {
-            viewModel.loadRecipe(recipeName: mealName) {
-                let attributedString = NSMutableAttributedString(string: "Watch Recipe On Youtube")
-                attributedString.addAttribute(.link, value: self.viewModel.recipe.first?.youtube, range: NSRange(location: 19, length: 55))
-                self.youtubeLinkTextView.attributedText = attributedString
-            }
+            viewModel.loadRecipe(recipeName: mealName) 
         }
     }
     
@@ -52,8 +48,10 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
               let mealName = recipe.meal,
               let mealNationality = recipe.area else {return}
         
-        fetchImage(url: recipe.thumb)
-        makeRounded()
+        DispatchQueue.main.async {
+            self.fetchImage(url: recipe.thumb)
+            self.makeRounded()
+        }
         mealNameAndNationalityLabel.text = "\(mealName)(\(mealNationality))"
         mealCategoryLabel.text = recipe.category
         mealInstructionsLabel.text = recipe.instructions
@@ -67,7 +65,7 @@ class RecipeViewController: UIViewController, RecipeViewModelDelegate, UITextVie
     }
     
     func makeRounded() {
-        mealImageImageView.layer.cornerRadius = 20
+        mealImageImageView.layer.cornerRadius = 25
         mealImageImageView.clipsToBounds = true
     }
 }//End of Class
