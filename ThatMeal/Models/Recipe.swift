@@ -23,7 +23,7 @@ struct Recipe {
     var ingredientsString: String {
         var result: String = ""
         ingredients.forEach {
-            let ingredientPairString = "\($0.name) : \($0.measurement)\n"
+            let ingredientPairString = "\($0.name): \($0.measurement)\n"
             result.append(ingredientPairString)
         }
         return result
